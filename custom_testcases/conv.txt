@@ -1,0 +1,10 @@
+from PIL import Image
+def conv(path):
+	img=Image.open(path)
+	pd=list(img.convert('L').getdata())
+	pdns=str(pd).replace(" ",'')
+	#pdns=str(pd).replace("[",'')
+	#pdns=str(pd).replace("]",'')
+	return pdns
+
+print(conv(input('enter file path ')))
